@@ -1,0 +1,59 @@
+* {
+	outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+a:focus {
+	outline: none;
+}
+li {
+	list-style: none;
+}
+a,a:hover,a:link,a:visited,a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.fam {
+	font-family: "微软雅黑";
+}
+.font_18 {
+	font-size: 18px;
+}
+.font_16 {
+	font-size: 16px;
+}
+.font_12 {
+	font-size: 12px;
+}
+
+.l_h_70 {
+	line-height: 70px;
+}
+.l_h_50 {
+	line-height: 50px;
+}
+
+.rela {
+	position: relative;
+}
+
+.pad_10 {
+	padding: 10px;
+}
+.pad_20 {
+	padding: 20px;
+}
+
+.col_white {
+	color: white;
+}
+
+
+.bg_255 {
+	background: #fff;
+}
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		
+		<form enctype="multipart/form-data" method='post'>
+			<input type='file' multiple="multiple" id='showFile' />
+			<input type='button' class='show_sw_submit' value='上传' />
+		</form>
+		
+		<script>
+			
+		$('.show_sw_submit').on('click',function(){
+			
+			var file = document.getElementById('showFile');
+			var files = file.files;
+			
+			var oMyForm = new FormData();
+			oMyForm.append('userFile',files[0]);
+			oMyForm.append('userFile2',files[1]);
+			
+			var oReq = new XMLHttpRequest();
+			oReq.open('POST','Demo2.php',true);
+			oReq.send(oMyForm);
+				
+			oReq.onreadystatechange = function(){
+				if(oReq.readyState == 4){
+					if(oReq.status == 200){
+						//console.log(oReq.responseText);
+						alert(oReq.responseText);
+						alert('success');
+					}else{
+						alert('error');
+					}
+				}
+			}
+			
+		});	
+			
+		</script>
+		
+	</body>
+</html>

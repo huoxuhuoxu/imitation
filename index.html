@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html ng-app='myApp'>
+	<head>
+		<meta charset="utf-8" />
+		<title>仿阿里巴巴官网</title>
+		<meta name='keywords' content="网站关键字说明" />
+		<meta name="description" content="网站详细说明"  />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+		<!--[if lt IE 9]>
+	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+	    <link href="css/total.css" rel="stylesheet" />
+	    <script src="lib/browserdetect.min.js"></script>
+	    <script>
+	    	if(BrowserDetect.browser=='Internet Explorer' && BrowserDetect.version<9){
+	    		window.location.href = '/undefined.html';
+	    	}
+	    </script>
+	    <script src="lib/angular-1.4.0/angular.min.js"></script>
+	    <script src="lib/angular-1.4.0/angular-route.min.js"></script>
+	    <script src="lib/jquery-1.11.1.min.js"></script>
+	    <!-- 实际执行 -->
+		<script src="js/directive.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+	<body scroll-fixed>
+		
+		<!-- 页眉 -->
+		<header class='container-fluid total_header'>
+			<!-- banner与search -->
+			<section class='total_other'>
+				<nav class='col-sm-3 col-sm-offset-2 col-xs-6'>
+					<img src="img/v2.png" alt='公司商标' class='img-responsive' />
+				</nav>
+				<section class='col-sm-3 col-sm-offset-2 col-xs-6'>
+					<div class='form-group fam has-feedback' style='margin-top: 20px;'>
+						<label class='sr-only' for='total_search'>搜索产品</label>
+						<input type='search' class='form-control' placeholder="搜索产品" id='total_search' />
+						<span class='glyphicon glyphicon-search form-control-feedback text-muted font_18'></span>
+					</div>
+				</section>
+			</section>
+		</header>
+		<!-- nav -->
+		<nav class='total_nav rela' w-resize ng-controller='indexNavCtrl'>
+			
+			<li class='total_nav_bor'></li>
+			
+			<div class='total_nav_sight center-block'>
+				<!-- small nav total -->
+				<a href='javascript:void(0);' click-down>
+					<div class='pull-right total_small_ns text-center'>
+						<span class='glyphicon glyphicon-align-justify col_white l_h_70' aria-hidden='true'></span>
+					</div>
+				</a>
+				<!-- small logo -->
+				<a href='javascript:void(0);'>
+					<div class='pull-left total_small_logo'>
+						<img src="img/v2.png" class='img-responsive total_sl_img' alt='公司商标' />
+					</div>
+				</a>
+				<!-- small nav item -->
+				<section class='total_pos_nav'>
+					
+					<div class='total_pn_in'>
+						<div class='form-group has-feedback' style='width:240px;padding:0px;margin:0px;margin-left:30px;'>
+							<input class='form-control' placeholder="搜索产品" />
+							<span class='form-control-feedback glyphicon glyphicon-search text-muted font_18'></span>
+						</div>
+					</div>
+					<!-- 产品与服务 -->
+					<div click-height class='total_pn_nav col_white fam font_16 text-center'>
+						<span>产品与服务</span>
+						<span style='margin-top:5px;' class='glyphicon glyphicon-chevron-down pull-right' aria-hidden='true'></span>
+					</div>
+					<div class='total_pn_nt'>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+					</div>
+					<!-- 企业文化 -->
+					<div click-height class='total_pn_nav col_white fam font_16 text-center'>
+						<span>企业文化</span>
+						<span style='margin-top:5px;' class='glyphicon glyphicon-chevron-down pull-right' aria-hidden='true'></span>
+					</div>
+					<div class='total_pn_nt'>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+					</div>
+					<!-- 招贤纳士 -->
+					<div click-height class='total_pn_nav col_white fam font_16 text-center'>
+						<span>招贤纳士</span>
+						<span style='margin-top:5px;' class='glyphicon glyphicon-chevron-down pull-right' aria-hidden='true'></span>
+					</div>
+					<div class='total_pn_nt'>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+					</div>
+					<!-- 关于我们 -->
+					<div click-height class='total_pn_nav col_white fam font_16 text-center'>
+						<span>关于我们</span>
+						<span style='margin-top:5px;' class='glyphicon glyphicon-chevron-down pull-right' aria-hidden='true'></span>
+					</div>
+					<div class='total_pn_nt'>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>公司简介</a></li>
+						<li class='total_pn_nt_o fam font_16 text-center'><a class='total_pn_nt_op' href='javascript:void(0);'>业务范畴</a></li>
+					</div>
+				</section>
+				
+				<section class='total_nav_item col_white fam font_24 l_h_70'>
+					<a href='javascript:void(0);' class='total_ni_a' data-nav='0' hover-go click-go>
+						<span class='pad_to_nav_l'>产品与服务</span>
+						<span class='glyphicon glyphicon-chevron-down pad_to_nav_r'></span>
+					</a>
+				</section>
+				<section class='total_nav_item col_white fam font_24 l_h_70'>
+					<a href='javascript:void(0);' class='total_ni_a' data-nav='1' hover-go click-go>
+						<span class='pad_to_nav_l'>企业文化</span>
+						<span class='glyphicon glyphicon-chevron-down pad_to_nav_r'></span>
+					</a>
+				</section>
+				<section class='total_nav_item col_white fam font_24 l_h_70'>
+					<a href='javascript:void(0);' class='total_ni_a' data-nav='2' hover-go click-go>
+						<span class='pad_to_nav_l'>招贤纳士</span>
+						<span class='glyphicon glyphicon-chevron-down pad_to_nav_r'></span>
+					</a>
+				</section>
+				<section class='total_nav_item col_white fam font_24 l_h_70'>
+					<a href='javascript:void(0);' class='total_ni_a' data-nav='3' hover-go click-go>
+						<span class='pad_to_nav_l'>关于我们</span>
+						<span class='glyphicon glyphicon-chevron-down pad_to_nav_r'></span>
+					</a>
+				</section>
+			</div>
+			<!-- 导航下拉 -->
+			<div class='totle_nav_select'>
+				<!-- 产品与服务 -->
+				<section class='total_ns_sence rela center-block' style='display: none;'>
+					<div class='total_ns_sb'>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='1' a-click  class='total_ns_ia fam'>公司简介</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='2' a-click class='total_ns_ia fam'>业务范畴</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='3' a-click class='total_ns_ia fam'>历史及里程碑</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='4' a-click class='total_ns_ia fam'>领导团队</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='5' a-click class='total_ns_ia fam'>文化和价值观</a>
+							</li>
+						</nav>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='6' a-click class='total_ns_ia fam'>可持续发展</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='7' a-click class='total_ns_ia fam'>诚信合规</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='#/docsrc' data-value='8' a-click class='total_ns_ia fam'>常见问题</a>
+							</li>
+						</nav>
+					</div>
+					
+				</section>
+				<!-- 企业文化 -->
+				<section class='total_ns_sence rela center-block' style='display: none;'>
+					<div class='total_ns_sb'>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>投资者关系主页</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>投资者新闻及活动</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>年度股东大会</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>财务及运营数据</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>季度业绩</a>
+							</li>
+						</nav>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>公司治理</a>
+							</li>
+						</nav>
+					</div>	
+				</section>
+				<!-- 招贤纳士 -->
+				<section class='total_ns_sence rela center-block' style='display: none;'>
+					<div class='total_ns_sb'>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>招贤纳士</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>招贤纳士</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>招贤纳士</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>招贤纳士</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>招贤纳士</a>
+							</li>
+						</nav>
+					</div>	
+				</section>
+				<!-- 关于我们 -->
+				<section class='total_ns_sence rela center-block' style='display: none;'>
+					<div class='total_ns_sb'>
+						<nav class='total_ns_item'>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>关于我们1</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>关于我们2</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>关于我们3</a>
+							</li>
+							<li class='total_ns_il pad_to_nav_l'>
+								<a href='javascript:void(0);' class='total_ns_ia fam'>关于我们4</a>
+							</li>
+						</nav>
+					</div>	
+				</section>
+			</div>
+			
+		</nav>
+		
+		<!-- 特殊js置换层 -->
+		<div class='total_nav_displace'></div>
+		
+		<!-- 清空 -->
+		<div class='clearfix'></div>
+		<!-- 主内容 -->
+		<div style='min-height: 400px;'>
+			<div ng-view>
+		
+			</div>
+		</div>
+		
+		<!-- 页脚 -->
+		<footer class='container-fluid total_footer'>
+			
+			<div class='total_footer_sence center-block pad_20 col_white fam font_12'>
+				
+				<!-- logo -->
+				<section class='total_fs_nav'>
+					<img src="img/v2.png" alt='公司logo' class='img-responsive' />
+				</section>
+				<!-- 关于我们 -->
+				<section class='total_fs_nav text-left'>
+					<ul>
+						<li><h5>关于我们</h5></li>
+					</ul>
+					<ul>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>公司简介</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>业务范畴</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>历史及里程碑</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>领导团队</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>文化和价值观</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>可持续发展</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>诚信合规</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>常见问题</a></li>
+					</ul>
+				</section>
+				<!-- 投资者关系 -->
+				<section class='total_fs_nav text-left'>
+					<ul>
+						<li><h5>投资者关系</h5></li>
+					</ul>
+					<ul>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>投资者关系主页</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>投资者新闻及活动</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>年度股东大会</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>财务及运营数据</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>季度业绩</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>公司治理</a></li>
+					</ul>
+				</section>
+				<!-- 媒体及新闻资源 -->
+				<section class='total_fs_nav text-left'>
+					<ul>
+						<li><h5>新闻及媒体资源</h5></li>
+					</ul>
+					<ul>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>新闻发布</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>电子版年报</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>dolac新闻站</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>媒体报导</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>视频</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>媒体资料库</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>社交媒体</a></li>
+					</ul>
+				</section>
+				<!-- 联系我们 -->
+				<section class='total_fs_nav text-left'>
+					<ul>
+						<li><h5>联系我们</h5></li>
+					</ul>
+					<ul>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>办公地点</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>投资者联系</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>媒体联系</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>客户联系</a></li>
+						<li class='total_fs_la'><a href='javascript:void(0);' class='total_fs_na'>知识产权保障</a></li>
+					</ul>
+				</section>
+				
+				<!-- 清空 -->
+				<div class='clearfix'></div>
+				<!-- 页尾 -->
+				<section class='total_fs_sf text-center l_h_50'>
+					<a href='javascript:void(0);' class='total_fs_sa'>加入我们</a>
+					<span class='total_fs_st'>|</span>
+					<a href='javascript:void(0);' class='total_fs_sa'>免责声明</a>
+					<span class='total_fs_st'>|</span>
+					<a href='javascript:void(0);' class='total_fs_sa'>隐私政策</a>
+					<span class='total_fs_st'>|</span>
+					<a href='javascript:void(0);'>版权公告</a>
+					<span>&nbsp;&nbsp;©&nbsp;&nbsp;</span>
+					<span>&nbsp;2014-2015&nbsp;</span>
+					<span>xxxxx股份有限公司.</span>
+					<span>版权所有</span>
+				</section>
+				
+			</div>
+			
+		</footer>
+
+		
+	</body>
+</html>
